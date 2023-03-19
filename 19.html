@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+	
+<html>
+	<head>
+        <meta charset="UTF-8"/>
+
+
+	</head>
+	<body>
+<p>введи свой возраст</p>	
+<input id="elem9" placeholder="Возраст" type="text">
+<input id="button9" type="submit" value="Ввод">
+	<script  type="text/javascript">
+
+//Задачи для решения
+
+//___1___
+let num = 3//объявили переменную
+alert (num)//вывод на экран
+
+//___3___
+
+let  result = confirm('Сложить 2 числа?')//ставим всплывающее условие 
+if (result) {//если true то
+let c= prompt('Введи 1 значение');//выведем на экран область заполнения
+let d= prompt('Введи 2 значение'); //выведем на экран область заполнения
+let result = Number (c) +  Number(d)//подсчеты
+alert( 'Результат равен ' + result);//выведет результат равен и ответ (результат сложения)
+} else {//в противном случае
+  alert('Пока!!')//выведет пока
+}
+
+//___5___
+
+let a  = 17 //объявили число
+let b = 10 //объявили число
+let c = a - b //объявили число, говорим чему оно будет равно
+let d = 7//объявили число
+let result_5 = c + d  //объявили число, говорим чему оно будет равно
+document.write (result_5)//выводим в документ
+
+//___7___
+
+let str1 ='Привет'//объявили строку
+let str2 ='Мир'//объявили строку
+document.write (str1 +" "+ str2 )//конкатенируем
+
+//___9___
+
+let button9 =document.querySelector ('#button9');//получили значения с кнопки
+let elem9 =document.querySelector ('#elem9');//получили значения с обласи ввода
+button9.addEventListener ('click', function(){//событие клика на кнопку
+let year9 = (elem9.value);//присвоим переменной значение с области ввода
+//alert (`Мне ${year9} лет`)//второй выриант с длинными скобками переноса 
+alert ('Мне ' + year9 + ' лет') //конкатенация
+elem9.value = 'вставь новый текст'; //в значение инпута вставим новое значение
+})
+
+//___11___
+let e = prompt('Получить квадрат числа');//вывод сообщений на экран
+let result11 = Number (e * e)//возводим в квадрат (e**2)
+alert('Результат равен ' + result11)//конкатенируем и выводим на экран
+
+//___13___
+let num13 = '12345'
+let arr13 = num13.split('');//разбили строку по пустому разделителю
+console.log(arr13); //выведет  ['1', '2', '3', '4', '5']
+let multiple = 1//начнем умнож. с одмерки
+for (let i = 0; i <= arr13.length-1; i++) //объявим цикл
+{
+multiple *= arr13 [i] //все переумножаем
+}
+console.log (multiple)//выведет 120
+
+//___15___
+
+let date = new Date();// создаем новый объект дата и присваиваем его к переменной date
+let Year = (date.getFullYear()); // год
+let Month =(date.getMonth());    // месяц
+let Dat =(date.getDate());     // день
+
+let Hours =(date.getHours());    // часы
+let Minutes =(date.getMinutes());  // минуты
+let Seconds =(date.getSeconds());  // секунды
+document.write ('Date-('+Year+ '.' + Month + '.' +  Dat + ') Time-'+ ' ' +Hours+ ':' +Minutes+ ':' +Seconds)// выводим дату и время
+
+//___17___
+
+var num17 = 47;
+num17 += 7;
+num17 -= 18;
+num17 *= 10;
+num17 /= 15;
+alert(num17);//выведет 24
+
+
+
+	</script>
+
+	</body>
+</html>
